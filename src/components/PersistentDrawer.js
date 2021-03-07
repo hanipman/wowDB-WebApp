@@ -65,7 +65,7 @@ export default function PersistentDrawer({ open, handleDrawerClose }) {
 				</div>
 				<Divider />
 				<List>
-					{['Main', 'Browse', 'Favorites'].map((text, index) => (
+					{['Home', 'Browse', 'Favorites'].map((text, index) => (
 						<ListItem button key={text} component={Link} to={"/" + text} >
 							<ListItemText primary={text} />
 						</ListItem>

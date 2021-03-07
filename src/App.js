@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter, Switch, Route } from 'react-router-dom'
+import { BrowserRouter, Switch, Route, Redirect } from 'react-router-dom'
 import clsx from 'clsx';
 
 import Typography from '@material-ui/core/Typography';
@@ -64,28 +64,31 @@ export default function App() {
       				>
 						<div className={classes.drawerHeader} />
 						<Switch>
-							<Route exact path="/Main" render={() => 
+							<Route exact path="/" render={() =>
+								<Redirect to="/Home" />
+							} />
+							<Route exact path="/Home" render={() => 
 								<div>
 									<Typography paragraph>
-										Main Page
+										Home Page
 									</Typography>
 								</div>
 							} />
-							<Route path="/Browse" render={() =>
+							<Route exact path="/Browse" render={() =>
 								<div>
 									<Typography paragraph>
 										Browse Page
 									</Typography>
 								</div>
 							} />
-							<Route path="/Favorites" render={() =>
+							<Route exact path="/Favorites" render={() =>
 								<div>
 									<Typography paragraph>
 										Favorites Page
 									</Typography>
 								</div>
 							} />
-							<Route path="/Account" render={() =>
+							<Route exact path="/Account" render={() =>
 								<div>
 									<Typography paragraph>
 										Account Page

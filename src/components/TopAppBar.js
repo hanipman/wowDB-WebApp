@@ -38,6 +38,9 @@ const useStyles = makeStyles((theme) => ({
 	grow: {
 		flexGrow: 1,
 	},
+	region: {
+		marginRight: theme.spacing(6),
+	}
 }));
 
 export default function TopAppBar({ open, handleDrawerOpen }) {
@@ -64,6 +67,9 @@ export default function TopAppBar({ open, handleDrawerOpen }) {
                     wowDB
                 </Typography>
 				<div className={classes.grow} />
+				<Typography variant="h3" class={classes.region} >
+					Region Realm
+				</Typography>
 				<Autocomplete />
             </Toolbar>
         </AppBar>
