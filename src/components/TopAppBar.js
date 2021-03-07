@@ -8,9 +8,8 @@ import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 
+import { drawerWidth } from '../App.js';
 import Autocomplete from './Autocomplete.js';
-
-const drawerWidth = 240;
 
 const useStyles = makeStyles((theme) => ({
 	root: {

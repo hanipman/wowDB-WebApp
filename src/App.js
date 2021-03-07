@@ -9,7 +9,7 @@ import PersistentDrawer from './components/PersistentDrawer.js';
 import TopAppBar from './components/TopAppBar.js';
 import LineChart from './components/LineChart.js';
 
-const drawerWidth = 240;
+export const drawerWidth = 240;
 
 const useStyles = makeStyles((theme) => ({
 	root: {

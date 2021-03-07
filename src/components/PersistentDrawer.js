@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import clsx from 'clsx';
 
 import CssBaseline from '@material-ui/core/CssBaseline';
 import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
@@ -14,7 +13,9 @@ import ListItem from '@material-ui/core/ListItem';
 import ListItemText from '@material-ui/core/ListItemText';
 import { makeStyles, useTheme } from '@material-ui/core/styles';
 
-const drawerWidth = 240;
+import { drawerWidth } from '../App.js';
+
+// const drawerWidth = 240;
 
 const useStyles = makeStyles((theme) => ({
   	root: {
