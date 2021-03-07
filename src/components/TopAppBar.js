@@ -62,7 +62,7 @@ export default function TopAppBar({ open, handleDrawerOpen }) {
                     <MenuIcon />
                 </IconButton>
                 <Typography variant="h6" noWrap>
-                    Persistent drawer
+                    wowDB
                 </Typography>
 				<div className={classes.grow} />
 				<Autocomplete />
