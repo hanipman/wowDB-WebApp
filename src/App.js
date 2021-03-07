@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter, Switch, Route, Link } from 'react-router-dom'
+import { BrowserRouter, Switch, Route } from 'react-router-dom'
 import clsx from 'clsx';
 
 import Typography from '@material-ui/core/Typography';
@@ -82,6 +82,13 @@ export default function App() {
 								<div>
 									<Typography paragraph>
 										Favorites Page
+									</Typography>
+								</div>
+							} />
+							<Route path="/Account" render={() =>
+								<div>
+									<Typography paragraph>
+										Account Page
 									</Typography>
 								</div>
 							} />

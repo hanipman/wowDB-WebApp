@@ -15,8 +15,6 @@ import { makeStyles, useTheme } from '@material-ui/core/styles';
 
 import { drawerWidth } from '../App.js';
 
-// const drawerWidth = 240;
-
 const useStyles = makeStyles((theme) => ({
   	root: {
     	display: 'flex',
@@ -35,22 +33,6 @@ const useStyles = makeStyles((theme) => ({
 		// necessary for content to be below app bar
 		...theme.mixins.toolbar,
 		justifyContent: 'flex-end',
-  	},
-  	content: {
-		flexGrow: 1,
-		padding: theme.spacing(3),
-		transition: theme.transitions.create('margin', {
-			easing: theme.transitions.easing.sharp,
-			duration: theme.transitions.duration.leavingScreen,
-    	}),
-    	marginLeft: -drawerWidth,
-  	},
-  	contentShift: {
-    	transition: theme.transitions.create('margin', {
-			easing: theme.transitions.easing.easeOut,
-			duration: theme.transitions.duration.enteringScreen,
-    	}),
-    	marginLeft: 0,
   	},
 	userButton: {
 		
@@ -74,9 +56,9 @@ export default function PersistentDrawer({ open, handleDrawerClose }) {
         		}}
       		>
 				<div className={classes.drawerHeader}>
-					<Button className={classes.userButton} size='large' >
+					<Button className={classes.userButton} size='large' component={Link} to={"/Account"} >
 						username#0000
-					</Button>	
+					</Button>
 					<IconButton onClick={handleDrawerClose}>
 						{theme.direction === 'ltr' ? <ChevronLeftIcon /> : <ChevronRightIcon />}
 					</IconButton>
